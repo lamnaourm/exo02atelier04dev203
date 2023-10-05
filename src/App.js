@@ -1,4 +1,6 @@
 import './App.css';
+import Etablissement from './components/Etablissement';
+
 
 const list_stgs = [
   {id:1, nom:'Bertie Yates',age:22, filiere:'TDI', image:'https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg'},
@@ -11,7 +13,7 @@ const list_stgs = [
 function App() {
   return (
     <div className="container">
-      
+      <Etablissement stgs={list_stgs} />
     </div>
   );
 }
