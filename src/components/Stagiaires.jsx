@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Stagiaire({nom, filiere, age, image}) {
   return (
-    <div>
+    <div className='stagiaire'>
         <img src={image} alt={nom} />
         <div>
             <h1>{nom} - {filiere}</h1>

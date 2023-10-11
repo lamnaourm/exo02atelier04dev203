@@ -8,14 +8,18 @@ export default class Etablissement extends Component {
     }
   render() {
     return (
-      <div>
+      <div className='list'>
         <h1>Nombre d'etudiants : {this.state.stagiaires.length}</h1>
         {this.state.stagiaires.map(s => 
             <Stagiaire key={s.id} nom={s.nom} filiere={s.filiere} age={s.age} image={s.image}/>
             )}
 
-        <button onClick={() => this.setState({stagiaires: []})}>Clear all</button>
-        <button onClick={() => this.setState({stagiaires: this.props.stgs})}>all</button>
+          <div className='btns'>
+          <button onClick={(e) => {this.setState({stagiaires: []}) }} type='submit'>Clear all</button>
+          <button onClick={() => this.setState({stagiaires: this.props.stgs})}>all</button>
+          <button onClick={() => this.setState({stagiaires: this.props.stgs.filter(s => s.filiere==='TDI')})}>TDI</button>
+          <button onClick={() => this.setState({stagiaires: this.props.stgs.filter(s => s.filiere==='TRI')})}>TRI</button>
+        </div>
       </div>
     )
   }

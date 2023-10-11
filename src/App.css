@@ -1,4 +1,56 @@
-img {
-  width: 100px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkblue;
+  height: 100vh;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 30px;
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+}
+
+.list h1 {
+  font-size: 22px;
+}
+
+.stagiaire {
+  display: flex;
+  gap: 30px;
+}
+
+.stagiaire h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+.stagiaire h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+.list img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+.btns button {
+  background-color: darkblue;
+  color: white;
+  font-size: 16px;
+  padding: 5px;
 }
